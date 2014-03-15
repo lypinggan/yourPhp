@@ -1,0 +1,88 @@
+yourphp模板标签使用方法
+
+
+<YP:list order="id desc" catid="4" limit="6" posid="1">
+
+
+   <li><a href="{$r.url}" title="{$r.title}"><img alt="{$r.title}" src="{$r.thumb|thumb=###,219,135,1}" ></a><b><a href="{$r.url}" title="{$r.title}">{$r.title|str_cut=###,15}</a></b></li>
+
+
+  </YP:list>
+
+catid="8"设置调取那些栏目数据.多个栏目用半角逗号分开3,4,5,10  当设置为大栏目ID时取此栏目下所有子栏目数据.也可为变量$catid .
+posid="1" 设置数据推荐位
+linktype="2" 设置调用什么类型的链接 1为文字链接.2为图片链接
+id = "r"  定义数据查询的结果存放变量
+key    = "i" 返回数据主键变量名称
+where =''' 数据筛选条件
+order  = 'id desc';排序方式
+limit  ="10" 调用条数 默认10条
+field="*" 调用那些字段
+thumb="1" 值为1时调用有标题图片的数据.
+name="Article" 设置模型名称
+sql="" 自定义sql语句查询
+
+标内容部分:
+
+内容链接:{$r.url}
+内容标题:{$r.title}
+标题图片:{$r.thumb|thumb=###,219,135,1} 其中 |thumb=###,219,135,1为用thumb函数处理标题图片###为当前值在函数中的位置,后面三个值分别设置为缩略图的宽度,高度,是否自动裁剪(1为自动裁剪0为不裁剪)
+{$r.title|str_cut=###,15} str_cut=###,15为设置标题截取15个字符 str_cut=###,15,... 后面可加截取后缀
+
+
+
+子栏目标签YP:subcat  
+
+<YP:subcat  catid="8">
+  <li><a href="{$r.url}">{$r.catname}</a></li>
+</YP:subcat>
+
+catid="8"为定义取栏目id为8的所有子栏目
+self="1" 为1时同时在结果中加入本身栏目数据,为0为只取其所有子栏目
+key="n"定义数据结果键值名称
+id="r"定义数据查询的结果存放变量名称
+
+
+
+导航标签 YP:nav
+
+<div id="nav"> <YP:nav id="nav" catid="0" level="3" enname="1"  home="网站首页" /></div>
+
+参数设置:
+id="nav" 为ul的css定义的ID名称.
+catid="0" 为调用一级栏目导航;
+level="3" 为共调用3级栏目;
+enname="1"开启设置 是否同时显示英文名称
+
+
+
+在线客服标签 YP:kefu
+
+<YP:kefu id="kefu" left="-10" top="180" />
+
+id="kefu"   id的值为在线客服DIV层的ID名称,多个在线客服漂浮窗口时必须设置不同的值
+left="-10"  此项值为正数是显漂浮窗口距左侧的距离,值为负数是为距右侧的距离,值为0时屏幕居中显示
+top="180" 此项值为漂浮窗口距顶部的距离
+
+
+
+友情链接调用标签 YP:link
+
+<YP:link  typeid="2"  linktype="2" >
+  <li><a href="{$r['siteurl']}" target="_blank" title="{$r['name']}"><img src="{$r['logo']}" alt="{$r['name']}"></a></li>
+</YP:link>
+
+typeid="2" 为友情链接所有类别ID
+linktype="2" 设置调用什么类型的链接 1为文字链接.2为图片链接
+id = "r"  //定义数据查询的结果存放变量
+key    = "i" 返回数据主键变量名称
+order  = 'id desc';排序方式
+limit  ="10" 调用条数 默认10条
+
+
+
+面包宵标签YP:catpos  
+
+<YP:catpos  catid="$catid" space=" > " />
+catid="$catid" 当前栏目ID
+space=" > " 各栏目之前的分割符
