@@ -12,10 +12,10 @@
  return array(
 	'DB_TYPE'=>'mysql',
 	'DB_HOST'=>'localhost',
-	'DB_NAME'=>'xiuxiu',
+	'DB_NAME'=>'yourphp_svn',
 	'DB_USER'=>'root',
-	'DB_PWD'=>'wujin',
+	'DB_PWD'=>'',
 	'DB_PORT'=>'3306',
-	'DB_PREFIX'=>'tbl_',
+	'DB_PREFIX'=>'svn_',
 );
 ?>

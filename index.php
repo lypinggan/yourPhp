@@ -12,12 +12,12 @@
 if (!is_file('./config.php')) header("location: ./Install");
 header("Content-type: text/html; charset=utf-8");
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
-define('YOURPHP', 'YourPHP');
+define('YOURPHP', 'X');
 define('UPLOAD_PATH', './Uploads/');
-define('VERSION', 'v1.0');
+define('VERSION', '');
 define('UPDATETIME', '20140228');
-define('APP_NAME', 'Yourphp');
-define('APP_PATH', './Yourphp/');
+define('APP_NAME', 'XXXXX');
+define('APP_PATH', './App/');
 define('APP_LANG', false);
 define('APP_DEBUG',false);
 define('THINK_PATH','./Core/');
