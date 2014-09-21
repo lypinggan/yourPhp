@@ -1,6 +1,6 @@
 <?php
 $config	= array(
-        'DEFAULT_THEME'		=> 'Cici',
+        'DEFAULT_THEME'		=> 'Default',
 );
 return $config	;
 ?>

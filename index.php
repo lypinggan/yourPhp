@@ -16,7 +16,7 @@ define('YOURPHP', 'X');
 define('UPLOAD_PATH', './Uploads/');
 define('VERSION', '');
 define('UPDATETIME', '20140228');
-define('APP_NAME', 'XXXXX');
+define('APP_NAME', 'App');
 define('APP_PATH', './App/');
 define('APP_LANG', false);
 define('APP_DEBUG',false);

@@ -10,7 +10,7 @@
 </head>
 <body style="background:#E2E9EA">
 <div id="header" class="header">
-	<div class="logo"><a href="http://www.5xiu5xiu.com" target="_blank"><img src="./Public/Images/admin_logo.gif" width="180"></a></div>
+	<div class="logo"><a href="#" target="_blank"><img src="./Public/Images/sjzm08.png" style="max-width:180px;max-height:80px"></a></div>
 	<div class="nav f_r"> <a href="javascript:void(0);" onclick="gocacheurl();">{:L('UPDATE_CACHE')}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--<i>|</i> <a href="http://www.yourphp.cn" target="_blank">{:L('org_url')}</a> <i>|</i> <a href="http://www.yourphp.cn/license/" target="_blank">{:L('license')}</a>  <i>|</i> <a href="http://bbs.yourphp.cn" target="_blank">{:L('org_bbs')}</a>  <i>|</i> <a href="http://www.yourphp.cn/help" target="_blank">{:L('help')}</a> <i>|</i> &nbsp;&nbsp;--></div>
 
 	<div class="nav">&nbsp;&nbsp;&nbsp;&nbsp;{:L('welcome_user')}{$Think.session.username}  <i>|</i> [{$usergroup}]  <i>|</i> [<a href="{:U('Login/logout')}" target="_top">{:L('logout')}</a>]  <i>|</i> <a href="{$site_url}" target="_blank">{:L('home_index')}</a> </div>
@@ -56,7 +56,7 @@
 
 </div>
 
-<div id="footer" class="footer" >Powered by <a href="http://www.5xiu5xiu.com" target="_blank">5xiuxiu</a>&nbsp;{:VERSION}&nbsp;{:UPDATETIME} Copyright 2014-2015 <span id="run"></span></div>
+<div id="footer" class="footer" >Copyright <php>echo date('Y',time());</php> <span id="run"></span></div>
 
 <script language="JavaScript">
 if(!Array.prototype.map)
